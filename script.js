@@ -25,4 +25,14 @@ function about(){
     div.appendChild(link)
     app_div.innerHTML = ''
     app_div.appendChild(div)
-}
+}//End about
+
+function route(path, template){
+    if(typeof template === 'function')
+        return routes[path] = template
+    else if(typeof template === 'string')
+        return routes[path] = templates[template]
+    else
+        return;
+}//End route
+
