@@ -51,7 +51,7 @@ template('about',function(){
 route('/','home')
 route('/about','about')
 
-function resolverRoutes(route){
+function resolveRoutes(route){
     try{
         return routes[route]
     }catch(e){
@@ -61,7 +61,7 @@ function resolverRoutes(route){
 
 function router(evt){
     let url = window.location.hash.slice(1) || '/'
-    let route = resolveRoute(url)
+    let route = resolveRoutes(url)
     route()
 }
 
