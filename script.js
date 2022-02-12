@@ -36,3 +36,7 @@ function route(path, template){
         return;
 }//End route
 
+function template(name, templateFunction){
+    return templates[name] = templateFunction
+}//End template
+
