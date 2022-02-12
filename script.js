@@ -40,3 +40,14 @@ function template(name, templateFunction){
     return templates[name] = templateFunction
 }//End template
 
+template('home',function(){
+    home()
+})
+
+template('about',function(){
+    about()
+})
+
+route('/','home')
+route('/about','about')
+
